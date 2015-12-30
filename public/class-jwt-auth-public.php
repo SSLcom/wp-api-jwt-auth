@@ -227,7 +227,7 @@ class Jwt_Auth_Public
          * The HTTP_AUTHORIZATION is present verify the format
          * if the format is wrong return the user.
          */
-        list($token) = sscanf($auth, 'Bearer %s');
+        list($token) = sscanf($auth, 'Bearerwp %s');
         if (!$token) {
             return new WP_Error(
                 'jwt_auth_bad_auth_header',
